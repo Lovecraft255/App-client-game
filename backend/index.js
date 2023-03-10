@@ -2,15 +2,15 @@ const express = require("express");
 const { data , getGames , getGamesByGenres , getGamesByDev , getGamesByPlataform , getGamesByDate , orderByDate , orderByTitle} = require("./functions");
 
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
+app.use(express.json());
+
 
 app.get("/games", (req, res) => {
     //const games = getGames();
     const {cant , genre , developer , plataform , minDate , maxDate , order} = req.query;
-    console.log("Cant=",cant);
-    console.log("Genre=",genre);
-    console.log("Developer=",developer);
-    console.log("Genre=",genre);
-    console.log("Plataform=",plataform);
     let games = [];
 
     
@@ -57,6 +57,15 @@ app.get("/games", (req, res) => {
 
 
 
-app.listen(3001, () => {
-    console.log("Todo esta funcinando");
-}) 
+app.post("/games", (req, res) => {
+    const games = getGames(data);
+    console.log(games.length);
+    games.push(req.body);
+    console.log(games.length);
+    res.status(200).send("Peticion compekltada");
+})
+
+ const serever = app.listen(
+    process.env.PORT || 3001,
+    () => console.log('servidor lanzado en el puerto ', process.env.PORT)
+) 

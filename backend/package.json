@@ -1,7 +1,6 @@
 {
   "name": "tareaexpress",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
@@ -10,10 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "jest": "^28.1.0"
   },
   "devDependen cies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "description": ""
 }
