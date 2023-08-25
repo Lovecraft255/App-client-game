@@ -1,7 +1,4 @@
-{
-  "name": "tareaexpress",
-  "version": "1.0.0",
-  "main": "index.js",
+{  "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
   },

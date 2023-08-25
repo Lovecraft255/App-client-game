@@ -5,17 +5,17 @@ import Form from './components/Form.jsx'
 
 function App() {
   const [count, setCount] = useState(0);
-  let [juegos , setGames] = useState([]); 
+  let [juegos, setGames] = useState([]);
 
-  useEffect(()=> {
+  useEffect(() => {
     console.log(juegos)
-  },[juegos])
-  
+  }, [juegos])
+
   return (
-    <div className="App">
-      
+    <div  className="App">
+
       <Form setGames={setGames}></Form>
-      <ListGames juegos={juegos}></ListGames>
+      <ListGames  juegos={juegos}></ListGames>
     </div>
   )
 }
