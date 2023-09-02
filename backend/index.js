@@ -1,5 +1,8 @@
 const express = require("express");
 const { data , getGames , getGamesByGenres , getGamesByDev , getGamesByPlataform , getGamesByDate , orderByDate , orderByTitle} = require("./functions");
+const dotenv = require("dotenv"); 
+dotenv.config({path:`${__dirname}\\.env`});
+
 
 const app = express();
 const cors = require("cors");
@@ -64,8 +67,9 @@ app.post("/games", (req, res) => {
     console.log(games.length);
     res.status(200).send("Peticion compekltada");
 })
-
+ 
+let port = process.env.PORT || 3001;
  const serever = app.listen(
-    process.env.PORT || 3001,
-    () => console.log('servidor lanzado en el puerto ', process.env.PORT)
+    port,
+    () => console.log('servidor lanzado en el puerto ', port)
 ) 
