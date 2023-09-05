@@ -20,7 +20,7 @@ const Form = ({ setGames }) => {
 
     const pedirDatos = async (e) => {
         e.preventDefault();
-        let url = 'http://localhost:3001/games';
+        let url = 'http://app-games-backend-z1qn';
 
         if (caract.cant || caract.dev || caract.gen || caract.minDate || caract.plat || caract.eng || caract.maxDate || caract.order) {
             url += "?";
