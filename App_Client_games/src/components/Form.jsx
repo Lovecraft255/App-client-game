@@ -20,7 +20,7 @@ const Form = ({ setGames }) => {
 
     const pedirDatos = async (e) => {
         e.preventDefault();
-        let url = 'http://app-games-backend-z1qn';
+        let url = 'https://app-games-backend-z1qn-dev.fl0.io/';
 
         if (caract.cant || caract.dev || caract.gen || caract.minDate || caract.plat || caract.eng || caract.maxDate || caract.order) {
             url += "?";
