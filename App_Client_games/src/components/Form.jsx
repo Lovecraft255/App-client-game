@@ -20,7 +20,7 @@ const Form = ({ setGames }) => {
 
     const pedirDatos = async (e) => {
         e.preventDefault();
-        let url = 'https://games-app-back-rjnk.onrender.com/games';
+        let url = 'https://games-app-back-dev-tknt.1.us-1.fl0.io';
 
         if (caract.cant || caract.dev || caract.gen || caract.minDate || caract.plat || caract.eng || caract.maxDate || caract.order) {
             url += "?";
