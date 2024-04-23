@@ -44,7 +44,7 @@ const Form = ({ setGames }) => {
     }
 
     return (
-        <><div style={{ width:'100%',margin:'0 auto'}}></div>
+        <><div style={{ width:'50%',margin:'0 auto'}}></div>
             <form style={{border:'4px solid black', fontSize:'20px', color:'#000000', padding:'15px', backgroundColor:'#FFC0CB', margin:'0 auto', width:'100%'}} onSubmit={pedirDatos} >
                 <label>Cantidad de juegos que desea</label>
                 <input style={{marginLeft:'10px', marginBottom:'10px'}} id="cant" value={caract.cant} type="number" min="1" max="7"
