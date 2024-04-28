@@ -11,7 +11,7 @@ const juego = ({ game }) => {
         }
     }
 
-    return <tr style={{ border: '4px solid black', width:'10%', margin:'0 auto' }}>
+    return <tr style={{ border: '4px solid black', width:'10%', margin:'0 auto', display:'block' }}>
         <td style={{ width: '180px', fontSize: '15px', borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>{game.title}</td>
         <td style={{ width: '180px', fontSize: '15px', borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>{game.developer}</td>
         <td style={{ width: '180px', fontSize: '15px', borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>{game.publisher}</td>
