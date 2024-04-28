@@ -4,7 +4,7 @@ const ListGames = ({ juegos }) => {
     //const juego = juegos.map(game =>  console.log(game))
     return (
 
-        juegos ? (<table style={{color:'#000000', backgroundColor:'#00FFFF',  borderTop: '4px solid black', borderLeft: '4px black solid', width:'10%', margin:'0 auto', display:'block'}}>
+        juegos ? (<table style={{color:'#000000', backgroundColor:'#00FFFF',  borderTop: '4px solid black', borderLeft: '4px black solid', width:'10%', display:'block'}}>
             <tbody  >
                 <tr >
                     <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>title</td>
