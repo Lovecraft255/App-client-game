@@ -45,9 +45,9 @@ const Form = ({ setGames }) => {
 
     return (
         <><div></div>
-            <form style={{border:'4px solid black', fontSize:'20px', color:'#000000', padding:'15px', backgroundColor:'#FFC0CB',width:'90%', margin:'0 auto'}} onSubmit={pedirDatos} >
+            <form style={{ border: '4px solid black', fontSize: '20px', color: '#000000', padding: '15px', backgroundColor: '#FFC0CB', width: '40%'}} onSubmit={pedirDatos} >
                 <label>Cantidad de juegos que desea</label>
-                <input style={{marginLeft:'0', marginBottom:'10px'}} id="cant" value={caract.cant} type="number" min="1" max="7"
+                <input style={{ marginLeft: '10px', marginBottom: '10px' }} id="cant" value={caract.cant} type="number" min="1" max="7"
                     onChange={e => {
                         setCaract(prev => {
                             return {
@@ -60,7 +60,7 @@ const Form = ({ setGames }) => {
                 <br />
 
                 <label>Empresas de videojuegos que desea</label>
-                <input style={{marginLeft:'10px', marginBottom:'10px'}} id="dev" value={caract.dev} type="text" placeholder="none"
+                <input style={{ marginLeft: '10px', marginBottom: '10px' }} id="dev" value={caract.dev} type="text" placeholder="none"
                     onChange={e => {
                         setCaract(prev => {
                             return {
@@ -73,7 +73,7 @@ const Form = ({ setGames }) => {
                 <br />
 
                 <label>Genero de videojuegos que desea</label>
-                <input style={{marginLeft:'10px', marginBottom:'10px'}} id="gen" value={caract.gen} type="text" placeholder="none"
+                <input style={{ marginLeft: '10px', marginBottom: '10px' }} id="gen" value={caract.gen} type="text" placeholder="none"
                     onChange={e => {
                         setCaract(prev => {
                             return {
@@ -86,7 +86,7 @@ const Form = ({ setGames }) => {
                 <br />
 
                 <label>Plataforma de videojuegos que desea</label>
-                <input style={{marginLeft:'10px', marginBottom:'10px'}} id="plat" value={caract.plat} type="text" placeholder="none"
+                <input style={{ marginLeft: '10px', marginBottom: '10px' }} id="plat" value={caract.plat} type="text" placeholder="none"
                     onChange={e => {
                         setCaract(prev => {
                             return {
@@ -98,7 +98,7 @@ const Form = ({ setGames }) => {
 
                 <br />
                 <label>Fecha minima para los juegos lanzados</label>
-                <input style={{marginLeft:'10px', marginBottom:'10px'}} id="minDate" value={caract.minDate} type="date"
+                <input style={{ marginLeft: '10px', marginBottom: '10px' }} id="minDate" value={caract.minDate} type="date"
                     onChange={e => {
                         setCaract(prev => {
                             return {
@@ -111,7 +111,7 @@ const Form = ({ setGames }) => {
 
                 <br />
                 <label>Fecha maxima para los juegos lanzados</label>
-                <input style={{marginLeft:'10px', marginBottom:'10px'}} id="maxDate" value={caract.maxDate} type="date"
+                <input style={{ marginLeft: '10px', marginBottom: '10px' }} id="maxDate" value={caract.maxDate} type="date"
                     onChange={e => {
                         setCaract(prev => {
                             return {
@@ -123,7 +123,7 @@ const Form = ({ setGames }) => {
 
                 <br />
                 <label>Que tipo de ordenamiento quiere</label>
-                <select style={{marginLeft:'10px', marginBottom:'10px'}} name="Orden" id="order" value={caract.order}
+                <select style={{ marginLeft: '10px', marginBottom: '10px' }} name="Orden" id="order" value={caract.order}
                     onChange={e => {
                         setCaract(prev => {
                             return {
@@ -138,7 +138,22 @@ const Form = ({ setGames }) => {
                     <option value="date">date</option>
                 </select>
                 <br />
-                <input style={{border:'4px solid white', fontSize:'20px', marginTop:'10px', width:'50%', marginLeft:'140px', marginRight:'auto'}} type="submit" value="Filtrar datos" />
+                <input
+                    style={{
+                        border: '4px solid black',
+                        fontSize: '20px',
+                        marginTop: '10px',
+                        width: '50%',
+                        marginLeft: '140px',
+                        marginRight: 'auto',
+                        transition: 'background-color 0.3s ease', /* Añadimos una transición para suavizar el cambio */
+                    }}
+                    type="submit"
+                    value="Solicitar juegos"
+                    onMouseOver={e => e.target.style.backgroundColor = '#CCCCCC'} /* Cambia el color de fondo al pasar el mouse sobre el elemento */
+                    onMouseOut={e => e.target.style.backgroundColor = 'white'} /* Vuelve a cambiar el color de fondo cuando el mouse deja el elemento */
+                />
+
                 <br />
                 <br />
             </form></>
@@ -149,3 +164,4 @@ const Form = ({ setGames }) => {
 }
 
 export default Form;
+

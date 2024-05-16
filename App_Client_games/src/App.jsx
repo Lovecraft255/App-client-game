@@ -15,7 +15,7 @@ function App() {
     <div  className="App">
 
       <Form setGames={setGames}></Form>
-      <ListGames  juegos={juegos}></ListGames>
+      <ListGames juegos={juegos}></ListGames>
     </div>
   )
 }
