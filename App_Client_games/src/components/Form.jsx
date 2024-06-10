@@ -52,12 +52,13 @@ const Form = ({ setGames }) => {
       <div></div>
       <form
         style={{
-          border: "4px solid black",
-          fontSize: "20px",
-          color: "#000000",
-          padding: "15px",
-          backgroundColor: "#FFC0CB",
-          width: "40%",
+          backgroundColor: "#1a1a1a",
+          color: "white",
+          padding: "20px",
+          border: "1px solid #333",
+          borderRadius: "5px",
+          maxWidth: "400px",
+        
         }}
         onSubmit={pedirDatos}
       >

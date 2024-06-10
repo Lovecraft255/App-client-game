@@ -20,14 +20,22 @@ const Juego = ({ game }) => {
   }
 
   return (
-    <tr style={{ border: "4px solid black", width: "80%" }}>
+    <tr
+      style={{
+        border: "1px solid #333",
+        maxWidth: "80%",
+        margin: "0 auto",
+        backgroundColor: "#f2f2f2",
+      }}
+    >
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.title}
@@ -35,10 +43,11 @@ const Juego = ({ game }) => {
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.developer}
@@ -46,10 +55,11 @@ const Juego = ({ game }) => {
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.publisher}
@@ -57,10 +67,11 @@ const Juego = ({ game }) => {
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.genres}
@@ -68,10 +79,11 @@ const Juego = ({ game }) => {
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.release.day}/{game.release.month}/{game.release.year}
@@ -79,10 +91,11 @@ const Juego = ({ game }) => {
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.platforms.map((plat) => plat.name + ",")}
@@ -90,10 +103,11 @@ const Juego = ({ game }) => {
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.engine}
@@ -101,10 +115,11 @@ const Juego = ({ game }) => {
       <td
         style={{
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {DefinirModosDeJuegos()}
@@ -113,16 +128,15 @@ const Juego = ({ game }) => {
         style={{
           overflowY: "auto",
           width: "80%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
           textAlign: "center",
+          color: "#333",
         }}
       >
         {game.images.map((IUrl) => (
           <img
             style={{ width: "100px", height: "100px" }}
             key={IUrl}
-            src={"http://localhost:5173/"+ IUrl}
+            src={"http://localhost:5173/" + IUrl}
             alt="Game Image"
           ></img>
         ))}
@@ -133,10 +147,11 @@ const Juego = ({ game }) => {
           height: "420px",
           float: "right",
           width: "80%",
-          fontSize: "100%",
-          borderRight: "4px solid black",
-          borderBottom: "4px solid black",
+          fontSize: "1rem",
           textAlign: "center",
+          color: "#333",
+          border: "1px solid #333", // Agrega un borde de 1px sólido de color negro
+          padding: "8px", // Añade un espacio interno de 8px para separar el contenido del borde
         }}
       >
         {game.premise}

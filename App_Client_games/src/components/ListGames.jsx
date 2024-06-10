@@ -1,32 +1,114 @@
-import React, { useState, useEffect } from 'react';
-import Juego from './Juego';
+import React, { useState, useEffect } from "react";
+import Juego from "./Juego";
 const ListGames = ({ juegos }) => {
-    //const juego = juegos.map(game =>  console.log(game))
-    return (
-
-        juegos ? (<table style={{color:'#000000', backgroundColor:'#00FFFF',  borderTop: '4px solid black', borderLeft: '4px black solid', width:'80%', marginTop:'5%'}}>
-            <tbody  >
-                <tr >
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>title</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>developer</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>publisher</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>genres</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>release</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>platforms</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>engine</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>modes</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>images</td>
-                    <td style={{borderRight: "4px solid black", borderBottom: "4px solid black", textAlign: 'center' }}>premise</td>
-                </tr>
-
-                {juegos.map((game, index) => {
-                    console.log(game);
-                    return <Juego key={game.title} game={game}></Juego>
-                })}
-            </tbody>
-        </table>) : (<div >{"Datos no solicitados"}</div>)
-
-    )
-}
+  return juegos ? (
+    <table
+      style={{
+        color: "#333333",
+        backgroundColor: "#F5F5F5",
+        borderCollapse: "collapse",
+        width: "80%",
+        marginTop: "5%",
+        border: "1px solid #333", // Agregar bordes arriba y a los costados
+      }}
+    >
+      <tbody>
+        <tr
+          style={{
+            borderBottom: "1px solid #333", // Cambia el color del borde a #333
+            backgroundColor: "#F5F5F5",
+            textAlign: "center",
+          }}
+        >
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            title
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            developer
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            publisher
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            genres
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            release
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            platforms
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            engine
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            modes
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            images
+          </td>
+          <td
+            style={{
+              borderRight: "1px solid #333", // Cambia el color del borde a #333
+              padding: "10px",
+            }}
+          >
+            premise
+          </td>
+        </tr>
+        {juegos.map((game, index) => {
+          return <Juego key={game.title} game={game}></Juego>;
+        })}
+      </tbody>
+    </table>
+  ) : (
+    <div>{"Datos no solicitados"}</div>
+  );
+};
 
 export default ListGames;
